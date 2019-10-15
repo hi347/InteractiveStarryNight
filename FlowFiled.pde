@@ -54,7 +54,7 @@ class FlowField {
     int column = int(constrain(x/resolution, 0, cols-1));
     int row = int(constrain(y/resolution, 0, rows-1));
     //return PVector.add(field[column][row],tempField[column][row]);  //注释掉
-    return field[column][row]；
+    return field[column][row];
   }
 
   void drawBrush() {
