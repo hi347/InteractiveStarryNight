@@ -53,7 +53,8 @@ class FlowField {
   PVector lookup(float x, float y) {
     int column = int(constrain(x/resolution, 0, cols-1));
     int row = int(constrain(y/resolution, 0, rows-1));
-    return PVector.add(field[column][row],tempField[column][row]);
+    //return PVector.add(field[column][row],tempField[column][row]);  //注释掉
+    return field[column][row]；
   }
 
   void drawBrush() {
@@ -71,7 +72,8 @@ class FlowField {
       for (int j=-affectRadius; j<=affectRadius; j++) {
         if (i*i+j*j<affectRadius*affectRadius) {
           try { 
-            tempField[column+i][row+j].add(v).mult(0.9);
+            //tempField[column+i][row+j].add(v).mult(0.9);  //注释掉
+            field[column+i][row+j].add(v);
           }
           catch(Exception e) {
           }
