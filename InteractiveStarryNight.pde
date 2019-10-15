@@ -84,7 +84,7 @@ void draw()
     stroke(tabParticles[i].myColor, 250);
     line(tabParticles[i].prevX, tabParticles[i].prevY, tabParticles[i].x, tabParticles[i].y);
   }
-  ff.updateField();
+  //ff.updateField();   //注释掉
 }
 
 void mouseDragged() {
@@ -96,6 +96,11 @@ void keyPressed() {
   //if (key =='s' || key == 'S') {
   //  ff.saveField();
   //}
+  
+  //改为可用
+  if (key =='s' || key == 'S') {
+    ff.saveField();
+  }
 }
 
 class myVector extends PVector
